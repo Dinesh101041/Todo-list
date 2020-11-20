@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./image/icon.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <header>
+        <!-- <img src="./image/icon.png" alt="Icon"> -->
+        <h1>Todo</h1>
+    </header>
+    <form>
+        <input type="text" class="todo-input"/>
+        <button class="todo-button" type="submit">
+            <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="All">All</option>
+                <option value="Completed">Completed</option>
+                <option value="Uncompleted">Uncompleted</option>
+            </select>
+        </div>
+    </form>
+    <div class="error-container">
+        <p>Todo is Empty.</p>
+    </div>
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+</body>
+<script src="./assets/fontawesome/js/all.min.js"></script>
+<script src="app.js"></script>
+</html>

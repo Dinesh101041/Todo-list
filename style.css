@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "MyWebFont";
+  src: url("../assets/fonts/Josefin_Sans/static/JosefinSans-SemiBold.ttf")
+    format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #80d0c7, #13547a);
+  color: azure;
+  font-family: MyWebFont;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+/*header h1{
+    background-color: #33E5BB;
+    background-image: -webkit-linear-gradient(-360deg, #33E5BB 0%,#2A54F5 100%);
+    background-image: linear-gradient(90deg,#33E5BB 0%,#2A54F5 100%);
+    width: auto;
+    padding-right: .0625rem;
+    margin: 0;
+    color: #fff;
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}*/
+
+header img {
+  height: 20vh;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+form input:focus,
+form button:focus {
+  outline-color: #80d0c7;
+}
+
+form button {
+  color: #13547a;
+  background: white;
+  cursor: pointer;
+  transition: all o.3s ease;
+}
+
+form button:hover {
+  background: #13547a;
+  color: white;
+}
+
+.todo-container,
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-container {
+  opacity: 0;
+  color: #fff;
+  transform: translate(0, -5vh);
+}
+
+.show {
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+.todo-list {
+  min-width: 50%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: whitesmoke;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #d4145a;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.complete-btn {
+  background: rgb(73, 204, 73);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotatez(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: white;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  font-family: MyWebFont;
+  font-size: 1rem;
+  color: #13547a;
+  width: 15rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #13547a;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease-in;
+}
+
+.select:hover::after {
+  background: white;
+  color: #13547a;
+}
